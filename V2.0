@@ -9,16 +9,16 @@ local PG = Player.PlayerGui
 
 local function callback(Text)
     if Text == " V2.0[                    ] " then
-        print("")
+        print("Join Server button clicked!")
 
         -- Check if setclipboard is available in your environment (note: this won't work in standard Roblox)
         if setclipboard then
-            setclipboard("")
+            setclipboard("https://discord.gg/ejHcaeuqXf")
         end
 
         -- Send another notification to inform the player
         game.StarterGui:SetCore("SendNotification", {
-            Title = "";
+            Title = "Discord Server";
             Text = "Copied Server to Clipboard.";
             Duration = 5; -- Duration for this notification
         })
@@ -32,9 +32,9 @@ local NotificationBindable = Instance.new("BindableFunction")
 NotificationBindable.OnInvoke = callback
 
 game.StarterGui:SetCore("SendNotification",  {
-    Title = "";
-    Text = "";
-    Icon = ""; -- Ensure this asset ID is valid
+    Title = "Server VRZ";
+    Text = "Soin VRZ Discord!";
+    Icon = "rbxassetid://102652360771883"; -- Ensure this asset ID is valid
     Duration = 86400;
     Button1 = " V2.0[                    ] ";
     Callback = NotificationBindable;
